@@ -58,7 +58,6 @@ footer {
 .grid{
   display: grid;
   row-gap: 20px;
-  column-gap: 20px;
 }
 .colx2{
   grid-template-columns: 1fr 1fr;
@@ -85,5 +84,12 @@ font-family: 'Roboto', sans-serif;
 .span2col{
   grid-column-start: 1;
   grid-column-end: 3;
+  justify-self: center;
+}
+.flex-column{
+  display: flex;
+  flex-direction: column;
+}
+.jtfy-center{
   justify-self: center;
 }

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club Montmartre</title>
+    <link rel="stylesheet" href="style-home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <header>
+        <div class="caja">
+            <h1><img alt="" src="imagenes/logo.jpg" width="200" height="200"></h1>
+            <nav>
+                <ul>
+                    <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="equipos.html">Equipos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main id="main">
+        <form class="flex-column" action="">
+            <fieldset class="grid colx2">
+                    <legend>Datos Personales</legend>
+                    <div class="jtfy-center">
+                        <label for="nombre">Nombre</label>
+                        <br>
+                        <input type="text" id="nombre" name="nombre" maxlength="25" >
+                    </div>
+                    <div class="jtfy-center">
+                        <label for="apellido">
+                            Apellido
+                        </label>
+                        <br>
+                        <input type="text" id="apellido" name="apellido">
+                    </div>
+                    <div class="jtfy-center">
+                        <label for="dni">DNI</label>
+                        <br>
+                        <input type="text" id="dni" name="dni" maxlength="8">
+                    </div>
+                    <div class="jtfy-center">
+                        <label for="edad">Edad</label>
+                        <br>
+                        <input type="text" id="edad" name="edad" maxlength="2">
+                    </div>
+                    <h3 class="span2col">Sexo</h3>
+                    <div class="jtfy-center">
+                        <label for="masc">Masculino</label>
+                        <input type="radio" id="masc" name="sexo" value="masc" checked>
+                    </div>
+                    <div class="jtfy-center">
+                        <label for="fem">Femenino</label>
+                        <input type="radio" id="fem" name="sexo" value="fem">
+                    </div>
+                    <div class="span2col">
+                        <label for="fecha-nacimiento">Fecha de nacimiento</label>
+                        <input type="date" id="fecha-nacimiento" >
+                    </div>
+                    <h3 class="span2col">Lugar de nacimiento</h3>
+                    <div class="jtfy-center">
+                        <label for="pais-nacimiento">Pais</label>
+                        <br>
+                        <input type="text" id="pais-nacimiento" name="pais-nacimiento" maxlength="15">
+                    </div>
+                    <div class="jtfy-center">
+                        <label for="ciudad-nacimiento">Ciudad</label>
+                        <br>
+                        <input type="text" id="ciudad-nacimiento" name="ciudad-nacimiento" maxlength="40">
+                    </div>
+            </fieldset>
+            <fieldset class="grid colx2">
+                <legend>Información de contacto</legend>
+                <div class="jtfy-center">
+                    <label for="domicilio">Direccion</label>
+                    <br>
+                    <input type="text" id="domicilio"  maxlength="50">
+                </div>
+                <div class="jtfy-center">
+                    <label for="cod-postal">Código Postal</label>
+                    <br>
+                    <input type="text" id="cod-postal" maxlength="5">
+                </div>
+                <div class="jtfy-center">
+                    <label for="tel-fijo">Teléfono</label>
+                    <br>
+                    <input type="tel" id="tel-fijo">
+                </div>
+                <div class="jtfy-center">
+                    <label for="tel-movil">Celular</label>
+                    <br>
+                    <input id="tel-movil" type="tel">
+                </div>
+                <div class="span2col">
+                    <label for="email">Correo electrónico</label>
+                    <br>
+                    <input id="email" type="email">
+                </div>
+            </fieldset>
+            <fieldset class="grid colx2">
+                <legend>Información de salud</legend>
+                <div class="jtfy-center span2col">
+                    <label for="grupo-sanguineo">Grupo Sanguineo</label>
+                    <select id="grupo-sanguineo">
+                        <option value="0+">0 Positivo</option>
+                        <option value="0-">0 Negativo</option>
+                        <option value="a+" selected> a Positivo</option>
+                        <option value="a-">a Negativo</option>
+                        <option value="b+">b Positivo</option>
+                        <option value="b-">b Negativo</option>
+                        <option value="ab+">ab Positivo</option>
+                        <option value="ab-">ab Negativo</option>
+                    </select>
+                </div>
+                <div>
+                    <fieldset class="jtfy-center">
+                        <legend>Tiene alguna alergia?</legend>
+                        <label for="alergia-si">SI</label>
+                        <input type="radio" name="alergia" id="alergia-si" value="si">
+                        <label for="alergia-no">NO</label>
+                        <input id="alergia-no"name="alergia" type="radio" value="no" checked>
+                        <br>
+                        <label for="alergia-tipo">Cual?</label>
+                        <input type="text" id="alergia-tipo" name="alergia-tipo" maxlength="40" disabled>
+                    </fieldset>
+                </div>
+                <div>
+                    <fieldset>
+                        <legend>Toma algun medicamento?</legend>
+                        <label for="medicacion-si">SI</label>
+                        <input type="radio" id="medicacion-si" name="medicacion" value="si">
+                        <label for="medicacion-no">NO</label>
+                        <input type="radio" id="medicacion-no" name="medicacion" value="no" checked >
+                        <br>
+                        <label for="medicamento-nombre">Cual?</label>
+                        <input type="text" id="medicamento-nombre" name="medicamento-nombre" maxlength="40" disabled>
+                    </fieldset>
+                </div>
+                <div class="span2col">
+                    <fieldset>
+                        <legend>Posee obra social</legend>
+                        <input type="radio" id="obra-sc-si" value="si" name="obra-sc">
+                        <label for="obras-si">SI</label>
+                        <input type="radio" id="obra-sc-no" value="no" name="obra-sc" checked>
+                        <label for="obra-sc-no">NO</label>
+                        <br>
+                        <label for="obra-sc-nombre">Cual?</label>
+                        <input type="text" id="obra-sc-nombre" name="obra-sc-nombre" maxlength="30" disabled>
+                    </fieldset>
+                </div>
+            </fieldset>
+            <fieldset class="grid colx2">
+                <legend>Contacto de Emergencia</legend>
+                <div class="jtfy-center">
+                    <label for="nombre-emerg">Nombre</label>
+                    <br>
+                    <input type="text" id="nombre-emerg" name="nombre-emerg" maxlenght="40">
+                </div>
+                <div class="jtfy-center">
+                    <label for="ape-emerg">Apellido</label>
+                    <br>
+                    <input type="text" id="ape-emerg" name="ape-emerg" maxlength="40">
+                </div>
+                <div class="span2col">
+                    <label for="paren-emerg">Parentesco</label>
+                    <br>
+                    <input type="text" id="paren-emerg" name="paren-emerg" maxlength="15">
+                </div>
+                <div class="jtfy-center">
+                    <label for="tel-fijo-emerg">Teléfono</label>
+                    <br>
+                    <input type="tel" id="tel-fijo-emerg" name="tel-fijo-emerg">
+                </div>
+                <div class="jtfy-center">
+                    <label for="tel-cel-emerg">Celular</label>
+                    <br>
+                    <input type="tel" id="tel-cel-emerg" name="tel-cel-emerg">
+                </div>
+            </fieldset>
+            <fieldset class="grid colx2">
+                <legend>Horario y Dia de interes</legend>
+                <div class="jtfy-center">
+                    <label for="dia-interes">Dia</label>
+                    <select name="dia-interes" id="dia-interes">
+                        <option value="ninguno" selected>sin seleccionar</option>
+                        <option value="lunes">Lunes</option>
+                        <option value="martes">Martes</option>
+                        <option value="miercoles">Miercoles</option>
+                        <option value="jueves">Jueves</option>
+                        <option value="viernes">Viernes</option>
+                    </select>
+                </div>
+                <div class="jtfy-center">
+                    <label for="horario">Horario</label>
+                <select name="horario" id="horario">
+                    <option value="ninguno">sin seleccionar</option>
+                    <option value="08-10">08:00-10:00</option>
+                    <option value="10-12">10:00-12:00</option>
+                    <option value="12-14">12:00-14:00</option>
+                </select>
+                </div>
+            </fieldset>
+        </form>
+    </main>
+    <footer>
+        <div class="drop-shadow-img flex-row-centered">
+            <p class="copyright">&copy Copyright Club Montmartre - 2022</p>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('main').style.color ='red'
+    </script>
+</body>
+</html>

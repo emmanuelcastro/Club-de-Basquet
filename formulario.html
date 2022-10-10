@@ -24,7 +24,7 @@
         </div>
     </header>
     <main id="main">
-        <form class="flex-column" action="">
+        <form class="flex-column" id="inscripcion" action="">
             <fieldset class="grid colx2">
                     <legend>Datos Personales</legend>
                     <div class="jtfy-center">
@@ -37,7 +37,7 @@
                             Apellido
                         </label>
                         <br>
-                        <input type="text" id="apellido" name="apellido">
+                        <input type="text" id="apellido" name="apellido" maxlength="25">
                     </div>
                     <div class="jtfy-center">
                         <label for="dni">DNI</label>
@@ -47,12 +47,12 @@
                     <div class="jtfy-center">
                         <label for="edad">Edad</label>
                         <br>
-                        <input type="text" id="edad" name="edad" maxlength="2">
+                        <input type="text" id="edad" name="edad" maxlength="3">
                     </div>
                     <h3 class="span2col">Sexo</h3>
                     <div class="jtfy-center">
                         <label for="masc">Masculino</label>
-                        <input type="radio" id="masc" name="sexo" value="masc" checked>
+                        <input type="radio" id="masc" name="sexo" value="masc">
                     </div>
                     <div class="jtfy-center">
                         <label for="fem">Femenino</label>
@@ -60,7 +60,7 @@
                     </div>
                     <div class="span2col">
                         <label for="fecha-nacimiento">Fecha de nacimiento</label>
-                        <input type="date" id="fecha-nacimiento" >
+                        <input type="date" id="fecha-nacimiento" name="fecha-nacimiento">
                     </div>
                     <h3 class="span2col">Lugar de nacimiento</h3>
                     <div class="jtfy-center">
@@ -77,24 +77,24 @@
             <fieldset class="grid colx2">
                 <legend>Información de contacto</legend>
                 <div class="jtfy-center">
-                    <label for="domicilio">Direccion</label>
+                    <label for="domicilio">Domicilio</label>
                     <br>
-                    <input type="text" id="domicilio"  maxlength="50">
+                    <input type="text" id="domicilio"  name="domicilio" maxlength="50" placeholder="mi direccion 1234">
                 </div>
                 <div class="jtfy-center">
                     <label for="cod-postal">Código Postal</label>
                     <br>
-                    <input type="text" id="cod-postal" maxlength="5">
+                    <input type="text" id="cod-postal" name="cod-postal" maxlength="8" placeholder="B1850AOO">
                 </div>
                 <div class="jtfy-center">
                     <label for="tel-fijo">Teléfono</label>
                     <br>
-                    <input type="tel" id="tel-fijo">
+                    <input type="tel" id="tel-fijo" name="tel-fijo" maxlength="12">
                 </div>
                 <div class="jtfy-center">
                     <label for="tel-movil">Celular</label>
                     <br>
-                    <input id="tel-movil" type="tel">
+                    <input  type="tel" id="tel-movil" name="tel-movil" maxlength="12">
                 </div>
                 <div class="span2col">
                     <label for="email">Correo electrónico</label>
@@ -106,15 +106,15 @@
                 <legend>Información de salud</legend>
                 <div class="jtfy-center span2col">
                     <label for="grupo-sanguineo">Grupo Sanguineo</label>
-                    <select id="grupo-sanguineo">
-                        <option value="0+">0 Positivo</option>
-                        <option value="0-">0 Negativo</option>
-                        <option value="a+" selected> a Positivo</option>
-                        <option value="a-">a Negativo</option>
-                        <option value="b+">b Positivo</option>
-                        <option value="b-">b Negativo</option>
-                        <option value="ab+">ab Positivo</option>
-                        <option value="ab-">ab Negativo</option>
+                    <select id="grupo-sanguineo" name="grupo-sanguineo">
+                        <option value="0-pos">0 Positivo</option>
+                        <option value="0-neg">0 Negativo</option>
+                        <option value="a-pos" selected> a Positivo</option>
+                        <option value="a-neg">a Negativo</option>
+                        <option value="b-pos">b Positivo</option>
+                        <option value="b-neg">b Negativo</option>
+                        <option value="ab-pos">ab Positivo</option>
+                        <option value="ab-neg">ab Negativo</option>
                     </select>
                 </div>
                 <div>
@@ -123,7 +123,7 @@
                         <label for="alergia-si">SI</label>
                         <input type="radio" name="alergia" id="alergia-si" value="si">
                         <label for="alergia-no">NO</label>
-                        <input id="alergia-no"name="alergia" type="radio" value="no" checked>
+                        <input id="alergia-no" name="alergia" type="radio" value="no">
                         <br>
                         <label for="alergia-tipo">Cual?</label>
                         <input type="text" id="alergia-tipo" name="alergia-tipo" maxlength="40" disabled>
@@ -135,10 +135,10 @@
                         <label for="medicacion-si">SI</label>
                         <input type="radio" id="medicacion-si" name="medicacion" value="si">
                         <label for="medicacion-no">NO</label>
-                        <input type="radio" id="medicacion-no" name="medicacion" value="no" checked >
+                        <input type="radio" id="medicacion-no" name="medicacion" value="no" >
                         <br>
                         <label for="medicamento-nombre">Cual?</label>
-                        <input type="text" id="medicamento-nombre" name="medicamento-nombre" maxlength="40" disabled>
+                        <input type="text" id="medicamento-nombre" name="medicamento-nombre" maxlength="25" disabled>
                     </fieldset>
                 </div>
                 <div class="span2col">
@@ -146,11 +146,11 @@
                         <legend>Posee obra social</legend>
                         <input type="radio" id="obra-sc-si" value="si" name="obra-sc">
                         <label for="obras-si">SI</label>
-                        <input type="radio" id="obra-sc-no" value="no" name="obra-sc" checked>
+                        <input type="radio" id="obra-sc-no" value="no" name="obra-sc">
                         <label for="obra-sc-no">NO</label>
                         <br>
-                        <label for="obra-sc-nombre">Cual?</label>
-                        <input type="text" id="obra-sc-nombre" name="obra-sc-nombre" maxlength="30" disabled>
+                        <label for="obra-sc">Cual?</label>
+                        <input type="text" id="obra-sc" name="obra-social" maxlength="25" disabled>
                     </fieldset>
                 </div>
             </fieldset>
@@ -159,12 +159,12 @@
                 <div class="jtfy-center">
                     <label for="nombre-emerg">Nombre</label>
                     <br>
-                    <input type="text" id="nombre-emerg" name="nombre-emerg" maxlenght="40">
+                    <input type="text" id="nombre-emerg" name="nombre-emerg" maxlength="25">
                 </div>
                 <div class="jtfy-center">
-                    <label for="ape-emerg">Apellido</label>
+                    <label for="apellido-emerg">Apellido</label>
                     <br>
-                    <input type="text" id="ape-emerg" name="ape-emerg" maxlength="40">
+                    <input type="text" id="apellido-emerg" name="apellido-emerg" maxlength="25">
                 </div>
                 <div class="span2col">
                     <label for="paren-emerg">Parentesco</label>
@@ -174,12 +174,12 @@
                 <div class="jtfy-center">
                     <label for="tel-fijo-emerg">Teléfono</label>
                     <br>
-                    <input type="tel" id="tel-fijo-emerg" name="tel-fijo-emerg">
+                    <input type="tel" id="tel-fijo-emerg" name="tel-fijo-emerg" maxlength="12">
                 </div>
                 <div class="jtfy-center">
                     <label for="tel-cel-emerg">Celular</label>
                     <br>
-                    <input type="tel" id="tel-cel-emerg" name="tel-cel-emerg">
+                    <input type="tel" id="tel-cel-emerg" name="tel-cel-emerg" maxlength="12">
                 </div>
             </fieldset>
             <fieldset class="grid colx2">
@@ -187,7 +187,7 @@
                 <div class="jtfy-center">
                     <label for="dia-interes">Dia</label>
                     <select name="dia-interes" id="dia-interes">
-                        <option value="ninguno" selected>sin seleccionar</option>
+                        <option value="" selected>sin seleccionar</option>
                         <option value="lunes">Lunes</option>
                         <option value="martes">Martes</option>
                         <option value="miercoles">Miercoles</option>
@@ -198,13 +198,14 @@
                 <div class="jtfy-center">
                     <label for="horario">Horario</label>
                 <select name="horario" id="horario">
-                    <option value="ninguno">sin seleccionar</option>
+                    <option value="">sin seleccionar</option>
                     <option value="08-10">08:00-10:00</option>
                     <option value="10-12">10:00-12:00</option>
                     <option value="12-14">12:00-14:00</option>
                 </select>
                 </div>
             </fieldset>
+            <button type="submit" form="inscripcion">Enviar formulario de inscripción</button>
         </form>
     </main>
     <footer>
@@ -212,8 +213,6 @@
             <p class="copyright">&copy Copyright Club Montmartre - 2022</p>
         </div>
     </footer>
-    <script>
-        document.getElementById('main').style.color ='red'
-    </script>
+    <script src="./js/validarFormulario.js"></script>
 </body>
 </html>

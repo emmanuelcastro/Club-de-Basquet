@@ -24,7 +24,7 @@
     </header>
     <main id="main">
         <form id="inscripcion" action="" >
-            <fieldset id="datos-personales" class="grid colx4 col-gap-20 row-gap-20 padding-all-10">
+            <fieldset id="datos-personales" class="grid cols col-gap row-gap padding-all-10">
                     <legend>Datos Personales</legend>
                     <label class="jtfy-flex-end" for="nombre">Nombre</label>
                     <input type="text" id="nombre" name="nombre" maxlength="25" placeholder="Juan Andres">
@@ -35,28 +35,28 @@
                     <input type="text" id="dni" name="dni" maxlength="8" placeholder="40879542">
                     <label class="jtfy-flex-end" for="edad">Edad</label>
                     <input type="text" id="edad" name="edad" maxlength="3" placeholder="18">
-                    <h3 class="span4col jtfy-center">Sexo</h3>
+                    <h3 class="span-cols jtfy-center">Sexo</h3>
                     <label class="jtfy-flex-end" for="masc">Masculino</label>
                     <input type="radio" id="masc" name="sexo" value="masc">
                     <label class="jtfy-flex-end" for="fem">Femenino</label>
                     <input type="radio" id="fem" name="sexo" value="fem">
-                    <div class="span4col jtfy-center">
+                    <div class="span-cols jtfy-center">
                         <label for="fecha-nacimiento">Fecha de nacimiento</label>
                         <input type="date" id="fecha-nacimiento" name="fecha-nacimiento">
                     </div>
-                    <h3 class="span4col jtfy-center">Lugar de nacimiento</h3>
+                    <h3 class="span-cols jtfy-center">Lugar de nacimiento</h3>
                     <label class="jtfy-flex-end" for="pais-nacimiento">Pais</label>
                     <input type="text" id="pais-nacimiento" name="pais-nacimiento" maxlength="15" placeholder="Argentina">
                     <label class="jtfy-flex-end" for="ciudad-nacimiento">Ciudad</label>
                     <input type="text" id="ciudad-nacimiento" name="ciudad-nacimiento" maxlength="40" placeholder="Buenos Aires">
             </fieldset>
-            <fieldset id="informacion-de-contacto" class="grid colx4 col-gap-20 row-gap-20 padding-all-10"">
+            <fieldset id="informacion-de-contacto" class="grid cols col-gap row-gap padding-all-10"">
                 <legend>Información de contacto</legend>
                 <label class="jtfy-flex-end" for="domicilio">Domicilio</label>
                 <input type="text" id="domicilio"  name="domicilio" maxlength="50" placeholder="mi direccion 1234">
                 <label class="jtfy-flex-end" for="cod-postal">Código Postal</label>
                 <input type="text" id="cod-postal" name="cod-postal" maxlength="8" placeholder="B1850AOO">
-                <p class="span4col jtfy-flex-end"><i id="ayuda--cod-postal" class="fa-regular fa-circle-question"></i><a href="https://www.correoargentino.com.ar/formularios/cpa" target="_blank">Consulta tu codigo postal</a></p>
+                <p class="span-cols jtfy-flex-end"><i id="ayuda--cod-postal" class="fa-regular fa-circle-question"></i><a href="https://www.correoargentino.com.ar/formularios/cpa" target="_blank">Consulta tu codigo postal</a></p>
                 <label class="jtfy-flex-end" for="tel-fijo">Teléfono</label>
                 <input type="tel" id="tel-fijo" name="tel-fijo" maxlength="12" placeholder="11-1234-1234">
                 <label class="jtfy-flex-end" for="tel-movil">Celular</label>
@@ -64,9 +64,9 @@
                 <label class="jtfy-flex-end" for="email">Correo electrónico</label>
                 <input id="email" type="email" name="email" placeholder="correo@correo.com">
             </fieldset>
-            <fieldset id="informacion-de-salud" class="grid colx4 col-gap-20 row-gap-20">
+            <fieldset id="informacion-de-salud" class="grid cols col-gap row-gap">
                 <legend>Información de salud</legend>
-                <div class="jtfy-center span4col">
+                <div class="jtfy-center span-cols">
                     <label for="grupo-sanguineo">Grupo Sanguineo</label>
                     <select id="grupo-sanguineo" name="grupo-sanguineo">
                         <option value="0-pos">0 Positivo</option>
@@ -79,41 +79,41 @@
                         <option value="ab-neg">ab Negativo</option>
                     </select>
                 </div>
-                <h3 class="span4col jtfy-center">Tiene alguna alergia?</h3>
+                <h3 class="span-cols jtfy-center">Tiene alguna alergia?</h3>
                 <label class="jtfy-flex-end" for="alergia-si">SI</label>
                 <input type="radio" id="alergia-si" name="alergia" value="si">
                 <label class="jtfy-flex-end" for="alergia-no">NO</label>
                 <input type="radio" id="alergia-no" name="alergia" value="no">
-                <div class="span4col jtfy-center">
+                <div class="span-cols jtfy-center">
                     <label for="alergia-tipo">Cual?</label>
                     <input type="text" id="alergia-tipo" name="alergia-tipo" maxlength="40" disabled>
                 </div>
-                <h3 class="span4col jtfy-center">Toma algun medicamento?</h3>
+                <h3 class="span-cols jtfy-center">Toma algun medicamento?</h3>
                 <label class="jtfy-flex-end" for="medicacion-si">SI</label>
                 <input type="radio" id="medicacion-si" name="medicacion" value="si">
                 <label class="jtfy-flex-end" for="medicacion-no">NO</label>
                 <input type="radio" id="medicacion-no" name="medicacion" value="no">
-                <div class="span4col jtfy-center">
+                <div class="span-cols jtfy-center">
                     <label for="medicacion-tipo">Cual?</label>
                     <input type="text" id="medicacion-tipo" name="medicacion-tipo" maxlength="25" disabled>
                 </div>
-                <h3 class="span4col jtfy-center">Posee obra social?</h3>
+                <h3 class="span-cols jtfy-center">Posee obra social?</h3>
                 <label class="jtfy-flex-end" for="obras-si">SI</label>
                 <input type="radio" id="obra-sc-si" value="si" name="obra-sc">
                 <label class="jtfy-flex-end" for="obra-sc-no">NO</label>
                 <input type="radio" id="obra-sc-no" value="no" name="obra-sc">
-                <div class="span4col jtfy-center">
+                <div class="span-cols jtfy-center">
                     <label for="obra-sc-tipo">Cual?</label>
                     <input type="text" id="obra-sc-tipo" name="obra-sc-tipo" maxlength="25" disabled>
                 </div>
             </fieldset>
-            <fieldset id="contacto-emergencia" class="grid colx4 col-gap-20 row-gap-20 padding-all-10">
+            <fieldset id="contacto-emergencia" class="grid cols col-gap row-gap padding-all-10">
                 <legend>Contacto de Emergencia</legend>
                 <label class="jtfy-flex-end" for="nombre-emerg">Nombre</label>
                 <input type="text" id="nombre-emerg" name="nombre-emerg" maxlength="25" placeholder="Gustavo">
                 <label class="jtfy-flex-end" for="apellido-emerg">Apellido</label>
                 <input type="text" id="apellido-emerg" name="apellido-emerg" maxlength="25" placeholder="Perez">
-                <div class="span4col jtfy-center">
+                <div class="span-cols jtfy-center">
                     <label for="paren-emerg">Parentesco</label>
                     <input type="text" id="paren-emerg" name="paren-emerg" maxlength="15" placeholder="Padre">
                 </div>
@@ -122,7 +122,7 @@
                 <label class="jtfy-flex-end" for="tel-movil-emerg">Celular</label>
                 <input type="tel" id="tel-movil-emerg" name="tel-movil-emerg" maxlength="12" placeholder="11-1234-1234">
             </fieldset>
-            <fieldset id="horario-dia-interes" class="grid colx4 col-gap-20 row-gap-20 padding-all-10"">
+            <fieldset id="horario-dia-interes" class="grid cols col-gap row-gap padding-all-10">
                 <legend>Horario y Dia de interes</legend>
                 <label class="jtfy-flex-end" for="dia-interes">Dia</label>
                 <select name="dia-interes" id="dia-interes">
@@ -141,8 +141,8 @@
                     <option value="12-14">12:00-14:00</option>
                 </select>
             </fieldset>
-            <div class="grid colx4">
-                <button type="submit" form="inscripcion" class="span4col jtfy-center">Enviar formulario de inscripción</button>
+            <div class="grid cols">
+                <button id="submit-button" type="submit" form="inscripcion" class="span-cols jtfy-center">Enviar formulario de inscripción</button>
             </div>
         </form>
     </main>

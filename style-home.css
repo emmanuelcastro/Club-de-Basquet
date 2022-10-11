@@ -16,11 +16,11 @@
   margin: 0 auto;
 }
 
-nav {
+/* nav {
   position: absolute;
   top: 110px;
   right: 0;
-}
+} */
 
 nav li {
   display: inline;
@@ -44,6 +44,7 @@ header{
 }
 footer {
   background-image: var(--degradado-1);
+  background-size: contain;
   width: 100%;
 }
 .copyright {
@@ -57,12 +58,40 @@ footer {
 }
 .grid{
   display: grid;
-  row-gap: 20px;
-  column-gap: 20px;
-  align-items: stretch;
+  justify-content: center;
+  align-items: center;
 }
-.colx2{
-  grid-template-columns: 1fr 1fr;
+.colx4{
+  grid-template-columns: repeat(4,1fr);
+}
+.rowx5{
+  grid-template-rows: 2fr repeta(4,1fr);
+}
+.span4col{
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
+.col-gap-20{
+  grid-column-gap: 20px;
+}
+.row-gap-20{
+  grid-row-gap: 20px;
+}
+.jtfy-flex-end{
+  justify-self: flex-end;
+}
+.jtfy-center{
+  justify-self: center;
+}
+.jtfy-flex-start{
+  justify-self: flex-start;
+}
+.flex-column{
+  display: flex;
+  flex-direction: column;
+}
+.padding-all-10{
+  padding: 10px;
 }
 /*roboto
 font-family: 'Roboto', sans-serif;
@@ -83,41 +112,48 @@ font-family: 'Roboto', sans-serif;
   justify-content: center;
   align-items: center;
 }
-.span2col{
-  grid-column-start: 1;
-  grid-column-end: 3;
-  justify-self: center;
+.centered{
+  margin: 0 auto;
 }
-.flex-column{
-  display: flex;
-  flex-direction: column;
-}
-.jtfy-center{
-  justify-self: center;
+.inline-block{
+  display: inline-block;
 }
 form{
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  color:white;
+  text-shadow: 2px 2px 5px #000000;
+  background-image: linear-gradient(90deg, grey 75%,rgba(24, 20, 20, 0.682));
 }
 legend{
   margin: 0 auto;
   font-size: 22px;
   font-weight: bold;
 }
-div>fieldset>legend{
+form input{
   font-size: 16px;
 }
-@media screen and (max-width: 400px){
-  form{
-    font-size: 14px;
+form select{
+  font-size: 16px;
+}
+@media screen and ( max-width: 500px){
+  .colx4{
+    grid-template-columns: 1fr;
   }
-  legend{
-    font-size: 16;
+  .span4col{
+    grid-column-start: 1;
+    grid-column-end: 2;
   }
-  div>fieldset>legend{
-    font-size: 12px;
+  .jtfy-flex-end{
+    justify-self: center;
   }
-  main{
-    background-color: orange;
+  form input[type="date"]{
+    display: block;
+  }
+  .flex-row-centered{
+    flex-wrap: wrap;
   }
 }

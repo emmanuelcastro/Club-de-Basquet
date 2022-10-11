@@ -45,12 +45,14 @@ const validarParentesco = function(){
     let parentescosPosibles = ['padre','madre','tutor','hermano','hermana','primo','prima','abuelo','abuela'];
     for( parentesco of parentescosPosibles ){
         if( inputParentesco.value.toLowerCase().includes(parentesco)){
-            inputParentesco.style.borderColor = 'green';
+            inputParentesco.classList.remove('glow-error');
+            inputParentesco.classList.add('glow-passed');
             estados['paren-emerg'] = true;
             break
         }
         else{
-            inputParentesco.style.borderColor = 'red';
+            inputParentesco.classList.remove('glow-passed');
+            inputParentesco.classList.add('glow-error');
             estados['paren-emerg'] = false;
         }
     }
@@ -72,12 +74,15 @@ const comprobarRadios = function( input ){
         inputDesactivado.removeAttribute('disabled');
         estados[inputName] = true;
         estados[`${inputName}-tipo`] = true
+        validarCampo(patrones.nombre,inputDesactivado,`${inputName}-tipo`);
     }
     else if( inputValue === 'no'){
         inputDesactivado.setAttribute('disabled','');
         inputDesactivado.value = "";
         estados[inputName] = false;
-        estados[`${inputName}-tipo`] = false
+        estados[`${inputName}-tipo`] = false;
+        inputDesactivado.classList.remove('glow-passed');
+        inputDesactivado.classList.remove('glow-error');
     }
     
 }
@@ -85,6 +90,8 @@ const comprobarSelect = function( input ){
     let inputValue = input.value;
     if( inputValue !== ""){
         estados[input.name] = true;
+        input.classList.add('glow-passed');
+        input.classList.remove('glow-error');
     }
     else{
         estados[input.name] = false;
@@ -169,11 +176,13 @@ const validarIngresos = ( event )=>{
 }
 const validarCampo = (patron, input, name )=>{
     if( patron.test(input.value)){
-        document.getElementById(name).style.borderColor = 'green';
+        input.classList.add('glow-passed')
+        input.classList.remove('glow-error')
         estados[name] = true;
     }
     else{
-        document.getElementById(name).style.borderColor = 'red';
+        input.classList.remove('glow-passed')
+        input.classList.add('glow-error')
         estados[name] = false;
     }
 }

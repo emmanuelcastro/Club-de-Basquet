@@ -9,61 +9,70 @@
 html{
   font-size: 62.5%;
 }
-.sticky{
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-#top-bar{
-  display: flex;
-  height: 64px;
-  flex-wrap: nowrap;
-  justify-content: center;
-  background-image: linear-gradient(45deg, rgb(196, 185, 32), rgba(71, 59, 19, 0.499));
-  background-color: goldenrod;
-}
-#top-content{
-  display: flex;
-  min-width: 80%;
-  max-width: 960px;
-  justify-content: space-between;
+
+body{
+  display: grid;
   align-items: center;
-  column-gap: 10rem;
-  border: 1px solid orange;
+  grid-template-areas:'header header header header header header'
+  '. main main main main .'
+  'footer footer footer footer footer footer' ;
+}
+#top-header{
+  position: sticky;
+  top: 0;
+  grid-area: header;
+  display: grid;
+  align-items: center;
+  grid-template-areas: '. logo-title nav-bar nav-bar nav-bar .';
+  /* background-image: var(--degradado-1); */
+  background-color: goldenrod;
+  height: 8rem;
 }
 #logo-title{
-  filter: drop-shadow(0 0 3px rgb(36, 33, 13));
-}
-#logo-top-bar{
-  width: 64px;
-  height: 64px;
+  grid-area: logo-title;
+  filter: drop-shadow( 0 0 5px black)
 }
 #nav-bar{
-  height: fit-content;
+  grid-area: nav-bar;
+  justify-self: center;
+}
+#logo-top-bar{
+  width: 6.4rem;
+  height: 6.4rem;
+}
+#main{
+  grid-area: main;
+  margin-top: 3rem;
 }
 #link-list{
   display: flex;
   list-style: none;
+  font-size: 2rem;
 }
 #link-list>li{
-  padding: 1rem;
+  padding: 0 1rem;
+}
+#link-list>li:hover{
+  transform:translateY(-5px);
+  background-color: palegoldenrod;
+  transition: 500ms;
 }
 #link-list>li>a{
   text-decoration: none;
-  text-transform:uppercase;
   color: black;
-  font-size: 1.5rem;
-}
-#link-list>li>a:hover{
-  color: white;
-}
-#main{
-  margin-top:64px; 
-  padding-top: 1rem;
 }
 #footer{
-  display: flex;
-  width: 100%;
-  background-color: goldenrod;
-  height: 64px;
+  grid-area: footer;
+  background-color:goldenrod;
+  height: 6.4rem;
+}
+@media screen and (max-width:400px){
+  #top-header{
+    grid-template-areas:'. . logo-title logo-title . .'
+    'nav-bar nav-bar nav-bar nav-bar nav-bar nav-bar';
+    height: fit-content;
+  }
+  #nav-bar{
+    justify-self: center;
+  }
 }

@@ -13,16 +13,20 @@
     <script src="https://kit.fontawesome.com/32b784676e.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header class="flex-row-centered">
-            <h1 class="inline-block centered"><img alt="" src="imagenes/logo.jpg" width="200" height="200"></h1>
-            <nav>
-                <ul>
-                    <li><a href="nosotros.html">Sobre Nosotros</a></li>
-                    <li><a href="equipos.html">Equipos</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                </ul>
-            </nav>
-    </header>
+    <div id="top-bar" class="sticky" >
+        <div id="top-content">
+            <header>
+                <h1 id="logo-title"><img id="logo-top-bar" alt="logo del club montmartre" src="imagenes/logo-trans.png"></h1>
+        </header>
+        <nav id="nav-bar">
+            <ul id="link-list">
+                <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="equipos.html">Equipos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        </div>
+    </div>
     <main id="main">
         <form id="inscripcion" action="" >
             <fieldset id="datos-personales" class="grid cols col-gap row-gap padding-all-10">
@@ -147,10 +151,7 @@
             </div>
         </form>
     </main>
-    <footer>
-        <div class="drop-shadow-img flex-row-centered">
-            <p class="copyright">&copy Copyright Club Montmartre - 2022</p>
-        </div>
+    <footer id="footer">
     </footer>
     <script src="./js/validarFormulario.js"></script>
 </body>
